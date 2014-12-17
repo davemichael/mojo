@@ -45,7 +45,7 @@ class InterfaceImpl : public Interface, public ErrorHandler {
   // client() method continues to return a non-null pointer after this method
   // is called. After this method is called, any method calls made on client()
   // will be silently ignored.
-  virtual void OnConnectionError() {}
+  virtual void OnConnectionError() override {}
 
   void set_delete_on_error(bool delete_on_error) {
     error_handler_impl_.set_delete_on_error(delete_on_error);
